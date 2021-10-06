@@ -10,8 +10,8 @@
     6. 查询指定用户后 M 名的用户
 
 - 实现全局ID生成；
-- 基于Bitmap实现id去重；
-- 基于HLL实现点击量计数。
+- 基于Bitmap实现id去重； ```setbit isCompletedFilter id(offset) 1 // return 0 没有重复, 1 已经存在```
+- 基于HLL实现点击量计数。 ```pfadd dau 
 - 以redis作为数据库，模拟使用lua脚本实现前面课程的外汇交易事务。
 
 2. 升级改造项目：
